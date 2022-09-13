@@ -1,11 +1,7 @@
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
+export const App = () => {
+  return(
+    <div>
       <h1>salve tesao</h1>
     </div>
-  );
+  )
 }
-
-export default App;
