@@ -8,5 +8,26 @@
     box-sizing: border-box;
 }
 
+.img{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 35px;;
+    
+}
 
+.img a img {
+    width: 150px;
+}
 
+.conheca{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px 20px;
+}
