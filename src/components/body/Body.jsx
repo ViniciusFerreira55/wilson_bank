@@ -36,6 +36,7 @@ export const Body = () => {
                     <a href="a"><img src={IconTransferencia} alt="transferencia"/></a>
                 </div>
         </div>
+        <div className='mb-20'></div>
         </div>
     )
 }
