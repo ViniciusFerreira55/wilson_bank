@@ -8,8 +8,8 @@ export const Navbar = () => {
                 <li className="inline-block p-8"><a href="Vantagens">Vantagens</a></li>
                 <li className="inline-block p-8"><a href="Sobre">Sobre</a></li>
                 <li className="inline-block p-8"><a href="Cartões">Cartões</a></li>
-                <li className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400"><a href="Login">Login</a></li>
-                <li className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5"><a href="Cadastrar-se">Cadastrar-se</a></li>
+                <li className="inline-block "><a className="p-12 rounded-full py-3 px-6 bg-purple-400" href="Login">Login</a></li>
+                <li className="inline-block"><a className=" p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5" href="Cadastrar-se">Cadastrar-se</a></li>
             </ul>
         </div>
     )
