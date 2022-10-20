@@ -6,7 +6,7 @@ import { PixPage } from './components/PixPage/PixPage'
 import { CardPage } from "./components/CardsPage/CardPage"
 import { LoginPage } from "./components/LoginPage/LoginPage"
 import Home from "./components/HomePage/Home"
-
+import { AboutPage } from "./components/AboutPage/AboutPage"
 
 export const App = () => {
   return(
@@ -18,6 +18,7 @@ export const App = () => {
       <Route path="/pix" element={< PixPage/>} />
       <Route path="/card" element={< CardPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   )
