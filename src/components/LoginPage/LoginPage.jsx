@@ -6,7 +6,7 @@ export const LoginPage = () =>{
     return(
         <div>
             <Navbar/>
-            <div className="flex">
+            <div className="flex ml-60">
                 <img src={Shirohige} alt="Shirohige" className="Shirohige ml-36"/>
                 <div className="ml-36 inline-grid">
                     <ul className="formulario">

@@ -3,7 +3,7 @@ import { Body } from '../body/Body'
 import { Footer } from '../footer/Footer'
 
 
-export const Home = () => {
+const Home = () => {
   return(
     <div>
     <Navbar />
@@ -12,3 +12,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home;

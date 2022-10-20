@@ -7,11 +7,11 @@ export const InvestimentPage = () =>{
         <div>
             <Navbar/>
             <div className="pt-8 flex">
-                <img src={Man2} alt="Man" className="manInvestiment"/>
+                <img src={Man2} alt="Man" className="manInvestiment pl-16"/>
                 <div>
-                    <img src={InvestimentIcon} alt="transference icon"  className="h-44 w-44 right-0 absolute mr-64"/>
+                    <img src={InvestimentIcon} alt="transference icon"  className="h-44 w-44  iconCoin"/>
                 </div>
-                <div className="mt-64 ml-80 text-2xl">
+                <div className="mt-64 mr-24 text-2xl">
                     <h2>Lorem ipsum dolor sit</h2>
                     <h2>amet, consectetur</h2>
                     <h2>adipiscing elit, sed do</h2>
