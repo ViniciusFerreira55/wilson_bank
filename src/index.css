@@ -80,6 +80,13 @@
     background-size: 50rem 40rem;
 }
 
+.fundo2{
+    background: url('./assets/jozu.png') no-repeat;
+    width: 100%;
+    height: 80vh;
+    background-position: right bottom;
+    background-size: 50rem 40rem;
+}
 .container{
     width: 1280px;
     height: 50vh;

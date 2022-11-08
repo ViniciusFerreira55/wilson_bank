@@ -14,7 +14,7 @@ export const Body = () => {
                 <h2>Venha fazer parte dessa caminhada</h2>
                 <h3>Com WilsonStreet você </h3>
                 <h3>   caminha para o sucesso!</h3>
-                <a href="Cadastrar-se" className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5 w-[12rem] self-end mt-4"><Link to="login">Cadastrar-se</Link></a>
+                <a href="Cadastrar-se" className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5 w-[12rem] self-end mt-4"><Link to="/register">Cadastrar-se</Link></a>
 
             </div>
            

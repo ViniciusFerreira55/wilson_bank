@@ -7,6 +7,7 @@ import { CardPage } from "./components/CardsPage/CardPage"
 import { LoginPage } from "./components/LoginPage/LoginPage"
 import Home from "./components/HomePage/Home"
 import { AboutPage } from "./components/AboutPage/AboutPage"
+import { Register } from './components/RegisterPage/RegisterPage'
 
 export const App = () => {
   return(
@@ -15,10 +16,11 @@ export const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/transferencia" element={<TransferencePage />} />
       <Route path="/investimento" element={<InvestimentPage />} />
-      <Route path="/pix" element={< PixPage/>} />
+      <Route path="/pix" element={< PixPage />} />
       <Route path="/card" element={< CardPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/register" element={<Register />}/>
       </Routes>
     </Router>
   )
