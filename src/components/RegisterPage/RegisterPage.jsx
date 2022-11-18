@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../navbar/Navbar";
@@ -10,6 +11,7 @@ export const Register = () => {
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const [confirmarSenha, setConfirmarSenha] = useState('')
+    const [objetoClient, setObjetoClient] = useState({})
     const navigate = useNavigate();
     // const [foto, setFoto] = useState('')
     // const [data, setData] = useState({
@@ -21,15 +23,14 @@ export const Register = () => {
     const validarCadastro = () => {
         console.log(senha)
         console.log(confirmarSenha)
-        if (senha !== confirmarSenha){
+        if (senha !== confirmarSenha) {
             return console.log('zimbas')
         }
 
         cadastrar()
-        
-    } 
 
-    
+    }
+
     // const handleImageChange = (e) => {
     //     let newData = { ...data };
     //     newData["image_url"] = e.target.files[0];
@@ -37,7 +38,7 @@ export const Register = () => {
     //     setFoto( e.target.files[0])
     //     console.log(newData);
     // };
- 
+
     const cadastrar = () => {
 
         console.log("Enviar pra api...")
@@ -51,45 +52,49 @@ export const Register = () => {
         // form_data.append("password", senha);
         // form_data.append("foto", foto);
         // console.log(form_data)
+        
 
-
-        const objCliente = {nome: nome, cpf: cfp, data_nascimento: dataNascimento, email: email, password: senha}
-        console.log(objCliente)
+        const objCliente = { nome: nome, cpf: cfp, data_nascimento: dataNascimento, email: email, password: senha }
         const headers = {
             'Content-Type': 'application/json',
-          };
-        fetch(urlApi + '/clientes/', { method: 'POST', headers, body: JSON.stringify(objCliente)}).then(res => res.json()).then(dd =>{ 
+        };
+        fetch(urlApi + '/clientes/', { method: 'POST', headers, body: JSON.stringify(objCliente) }).then(res => res.json()).then(dd => {
+            setObjetoClient(dd)
+        })
+            
+        const objConta = { cliente: objetoClient, numeroConta: '109313219', agencia: '45', tipo: 'C', saldo: 2469.69 }
+        fetch(urlApi + '/conta/', { method: 'POST', headers, body: JSON.stringify(objConta) }).then(res => res.json()).then(dd => {
             console.log(dd)
         })
 
         navigate('/')
     }
 
-    return(
-        
+    return (
+
         <div>
-            <Navbar/>
+            <Navbar />
             <div className="fundo2">
-            <div className="ml-36 inline-grid mt-32 ml-96">
+                <div className="ml-36 inline-grid mt-32 ml-96">
                     <form className="formulario list-none">
-                    <h1>Nome</h1>
-                    <li><input type="text" onChange={e => setNome(e.target.value)} name="nome" placeholder="Wilson" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li>
-                    <h1>CPF</h1>
-                    <li><input type="text" onChange={e => setCpf(e.target.value)} name="cpf" placeholder="12345678912" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li>
-                    <h1>Data de Nascimento</h1>
-                    <li><input type="date" onChange={e => setDataNascimento(e.target.value)} name="dataNas" placeholder="Data de nascimento" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li>
-                    <h1>Email</h1>
-                    <li><input type="email" onChange={e => setEmail(e.target.value)} name="email"  placeholder="jonas@gmail.com" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li>
-                    <h1>Senha</h1>
-                    <li><input type="password" onChange={e => setSenha(e.target.value)} name="senha" placeholder="123456" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li>
-                    <h1>Confirmar Senha</h1>
-                    <li><input type="password"  onChange={e => setConfirmarSenha(e.target.value)}  name="confirmar" placeholder="123456" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li>
-                    {/* <h1>Foto</h1>
+                        <h1>Nome</h1>
+                        <li><input type="text" onChange={e => setNome(e.target.value)} name="nome" placeholder="Wilson" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <h1>CPF</h1>
+                        <li><input type="text" onChange={e => setCpf(e.target.value)} name="cpf" placeholder="12345678912" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <h1>Data de Nascimento</h1>
+                        <li><input type="date" onChange={e => setDataNascimento(e.target.value)} name="dataNas" placeholder="Data de nascimento" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <h1>Email</h1>
+                        <li><input type="email" onChange={e => setEmail(e.target.value)} name="email" placeholder="jonas@gmail.com" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <h1>Senha</h1>
+                        <li><input type="password" onChange={e => setSenha(e.target.value)} name="senha" placeholder="123456" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <h1>Confirmar Senha</h1>
+                        <li><input type="password" onChange={e => setConfirmarSenha(e.target.value)} name="confirmar" placeholder="123456" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        {/* <h1>Foto</h1>
                     <li><input type="file" onChange={(e) => {handleImageChange(e)}}  name="photo" placeholder="Photo" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li> */}
-                    <li className="text-center"><a className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5"><button type="button" onClick={validarCadastro}>Cadastrar-se</button></a></li>
+                        <li className="text-center"><a className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5"><button type="button" onClick={validarCadastro}>Cadastrar-se</button></a></li>
                     </form>
+                </div>
             </div>
-        </div>
         </div>
     )
 }
