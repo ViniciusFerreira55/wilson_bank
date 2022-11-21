@@ -3,7 +3,7 @@ import { Body } from '../body/Body'
 import { Footer } from '../footer/Footer'
 import { useState } from "react"
 import { useEffect } from "react";
-
+import { LogadoBody } from '../LogadoBody/LogadoBody';
 export const useUser = () => {
   const [user, setUser] = useState();
 
@@ -26,9 +26,7 @@ const Home = () => {
     <div>
     <Navbar />
     {session &&
-    <>
-    <div>sim</div>
-    </>
+    <LogadoBody />
     }
     {!session &&
     <Body />

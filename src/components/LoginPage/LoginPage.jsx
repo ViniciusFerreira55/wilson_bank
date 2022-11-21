@@ -4,7 +4,6 @@ import Shirohige from "../../assets/Shirohige.png"
 import { useNavigate } from 'react-router-dom'
 import { useState } from "react";
 import { useEffect } from "react";
-
 const loginApiUrl = 'http://localhost:8000/login/';
 
 
@@ -37,7 +36,7 @@ export const LoginPage = () =>{
                         navigate('/')
                         return
                     }
-
+                    
                     console.log('DEU BOMBA')
                 })
             })

@@ -62,7 +62,7 @@ export const Register = () => {
             setObjetoClient(dd)
         })
             
-        const objConta = { cliente: objetoClient, numeroConta: '109313219', agencia: '45', tipo: 'C', saldo: 2469.69 }
+        const objConta = { cliente: objCliente, numeroConta: '109313219', agencia: '45', tipo: 'C', saldo: 2469.69 }
         fetch(urlApi + '/conta/', { method: 'POST', headers, body: JSON.stringify(objConta) }).then(res => res.json()).then(dd => {
             console.log(dd)
         })
