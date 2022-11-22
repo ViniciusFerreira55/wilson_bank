@@ -1,8 +1,7 @@
 import { Navbar } from "../navbar/Navbar"
 import { Footer } from "../footer/Footer"
-import PixGirl from "../../assets/PixGirl.png"
 import PixIcon from "../../assets/pix.png"
-
+import Kizaru from "../../assets/kizaru.png"
 
 export const PixPage = () =>{
     return(
@@ -25,7 +24,7 @@ export const PixPage = () =>{
                     <h2>laboris nisi ut aliquip</h2>
                 </div>
                 
-                <img src={PixGirl} alt="PixGirl" className="PixGirl"/>
+                <img src={Kizaru} alt="PixGirl" className="PixGirl"/>
             </div>
             <div>
                 <Footer/>

@@ -1,6 +1,6 @@
 import { Navbar } from "../navbar/Navbar";
 import { Footer } from "../footer/Footer";
-import Man from "../../assets/transferenceMan.png"
+import Zoro from "../../assets/zoro.png"
 import TransIcon from "../../assets/transferencia.png"
 
 
@@ -10,7 +10,7 @@ export const TransferencePage = () =>{
         <div>
             <Navbar/>
             <div className="pt-8 flex">
-                <img src={Man} alt="Man" className="manTransference"/>
+                <img src={Zoro} alt="Man" className="manTransference"/>
                 <div>
                     <div><img src={TransIcon} alt="transference icon"  className="h-44 w-44 absolute ml-96"/></div>
                 </div>

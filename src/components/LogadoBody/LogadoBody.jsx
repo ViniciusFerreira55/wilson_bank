@@ -6,19 +6,24 @@ import Tranferencia from '../../assets/transferencia.png'
 import Cartao from '../../assets/cartao.png'
 import Investimento from '../../assets/investimento.png'
 import { Link } from 'react-router-dom'
+import { useAccount } from "../navbar/Navbar";
 
 export const LogadoBody = () => {
-    const [saldo, setSaldo] = useState(100)
+    const session = useAccount();
     const [image, setImage] = useState(false)
     const aux = '*';
 
-    return (
+    if (!session) {
+        return <div>Loading..</div>
+    }
+
+    return (  
         <div>
         <div className="bg-indigo-500 flex">
             <div className="alinha-tudo flex-row">
-            <div className="text-2xl flex flex-row gap-3 "> Seu Saldo é:
+            <div className="text-2xl flex flex-row gap-3 "> Seu Saldo é: R$
                 <button href="" onClick={() => { setImage(!image) }} className="flex flex-row">
-                    {image === false ? (<>{aux.repeat(saldo.toString().length)} <img src={Hide} className="w-8 h-8 ml-8"/></>) : (<>{saldo}<img src={View} className="w-8 h-8 ml-8"></img></>)}
+                    {image === false ? (<>{aux.repeat(session.conta.saldo.toString().length)} <img src={Hide} className="w-8 h-8 ml-8" alt="olho"/></>) : (<>{session.conta.saldo}<img src={View} className="w-8 h-8 ml-8" alt="olho2"></img></>)}
                 </button>
             </div>
             </div>

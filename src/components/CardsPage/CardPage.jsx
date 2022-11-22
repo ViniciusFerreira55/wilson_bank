@@ -1,6 +1,6 @@
 import { Navbar } from "../navbar/Navbar"
 import { Footer } from "../footer/Footer"
-import CardGirl from "../../assets/CardGirl.png"
+import Marco from "../../assets/marco.png"
 import CardIcon from "../../assets/cartao.png"
 
 
@@ -25,7 +25,7 @@ export const CardPage = () =>{
                     <h2>laboris nisi ut aliquip</h2>
                 </div>
                 
-                <img src={CardGirl} alt="cardGirl" className="CardGirl"/>
+                <img src={Marco} alt="cardGirl" className="CardGirl"/>
             </div>
             <div>
                 <Footer/>

@@ -3,21 +3,39 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState } from "react"
 import { useEffect } from "react";
 
+/** @typedef {object} session
+ * @property {object} conta
+ * @property {string} conta.numeroConta
+ * @property {string} conta.agencia
+ * @property {string} conta.tipo
+ * @property {number} conta.saldo
+ * @property {object} conta.cliente
+ * @property {string} conta.cliente.nome
+ * @property {string} conta.cliente.cpf
+ * @property {string} conta.cliente.data_nascimento
+ * @property {string} conta.cliente.email
+ * @property {string} conta.cliente.data_cadastro
+ * @property {string} conta.cliente.password
+ */
 
-export const useUser = () => {
-    const [user, setUser] = useState();
+/**
+ * 
+ * @returns { session }
+ */
+export const useAccount = () => {
+    const [account, setAccount] = useState();
 
     useEffect(() => {
-        const userString = sessionStorage.getItem('user');
+        const accString = sessionStorage.getItem('conta');
         try {
-            const _User = JSON.parse(userString);
-            setUser(_User)
+            const _account = JSON.parse(accString);
+            setAccount(_account)
         } catch (err) {
             
         }
     }, [])
 
-    return user;
+    return account;
 }
 
 export const useLogoff = () => {
@@ -25,14 +43,14 @@ export const useLogoff = () => {
 
     return {
         logoff: () => {
-            sessionStorage.removeItem('user')
+            sessionStorage.removeItem('conta')
             navigate('/login')
         }
     }
 }
 
 export const Navbar = () => {
-    const session = useUser();
+    const session = useAccount();
     const { logoff } = useLogoff();
 
     return (
@@ -41,7 +59,7 @@ export const Navbar = () => {
             <ul>
                 {session &&
                 <>
-                <li className="inline-block p-8">Bem-Vindo {session.user.nome}</li>
+                <li className="inline-block p-8">Bem-Vindo {session.conta.cliente.nome}</li>
                 </>
                 } 
                 <li className="inline-block p-8"><Link to="/">Home</Link></li>

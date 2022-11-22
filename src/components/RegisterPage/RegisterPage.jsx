@@ -74,7 +74,7 @@ export const Register = () => {
         <div>
             <Navbar />
             <div className="fundo2">
-                <div className="ml-36 inline-grid mt-32 ml-96">
+                <div className="inline-grid mt-32 ml-96">
                     <form className="formulario list-none">
                         <h1>Nome</h1>
                         <li><input type="text" onChange={e => setNome(e.target.value)} name="nome" placeholder="Wilson" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>

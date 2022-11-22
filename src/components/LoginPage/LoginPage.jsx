@@ -30,14 +30,12 @@ export const LoginPage = () =>{
           };
         fetch(loginApiUrl, { method: 'POST', headers, body: JSON.stringify(objLogin)})
             .then(res => {
-                res.json().then(vv =>{
-                    if (vv.cliente) {
-                        sessionStorage.setItem('user', JSON.stringify({ user: vv.cliente }));
+                res.json().then(({ conta }) =>{
+                    if (conta) {
+                        sessionStorage.setItem('conta', JSON.stringify({ conta }));
                         navigate('/')
                         return
                     }
-                    
-                    console.log('DEU BOMBA')
                 })
             })
     }
