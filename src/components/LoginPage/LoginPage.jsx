@@ -52,6 +52,7 @@ export const LoginPage = () =>{
                     <li><input value={cpf} onChange={e=>setCpf(e.target.value)} type="text" placeholder="CPF" name="cpf" className="border-4  p-5 border-indigo-600 h-14 w-96"/></li>
                     <li><input value={password} onChange={e=>setPassword(e.target.value)} type="password" placeholder="senha" name="password" className="border-4  p-5 border-indigo-600 h-14 w-96"/></li>
                     <li className="text-center"><button className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5" onClick={logar}>Entrar</button></li>
+                    <li><a href="/register" className="underline ml-8">Novo por aqui? Clique aqui para se registrar!</a></li>
                     </ul>
                 </div>
                 </div>

@@ -13,6 +13,8 @@ export const Register = () => {
     const [confirmarSenha, setConfirmarSenha] = useState('')
     const [objetoClient, setObjetoClient] = useState({})
     const navigate = useNavigate();
+    const numeroContaR = (Math.floor(Math.random() * 100000)+"-"+Math.floor(Math.random() * 10)).toString();
+    const numeroAgenciaR = (Math.floor(Math.random() * 10000)).toString();
     // const [foto, setFoto] = useState('')
     // const [data, setData] = useState({
     //     title: "",
@@ -54,15 +56,12 @@ export const Register = () => {
         // console.log(form_data)
         
 
-        const objCliente = { nome: nome, cpf: cfp, data_nascimento: dataNascimento, email: email, password: senha }
+        const objCliente = { nome, cpf: cfp, data_nascimento: dataNascimento, email, password: senha }
         const headers = {
             'Content-Type': 'application/json',
         };
-        fetch(urlApi + '/clientes/', { method: 'POST', headers, body: JSON.stringify(objCliente) }).then(res => res.json()).then(dd => {
-            setObjetoClient(dd)
-        })
-            
-        const objConta = { cliente: objCliente, numeroConta: '109313219', agencia: '45', tipo: 'C', saldo: 2469.69 }
+
+        const objConta = { cliente: objCliente, numeroConta: numeroContaR, agencia: numeroAgenciaR, tipo: 'C', saldo: 2500.00 }
         fetch(urlApi + '/conta/', { method: 'POST', headers, body: JSON.stringify(objConta) }).then(res => res.json()).then(dd => {
             console.log(dd)
         })
