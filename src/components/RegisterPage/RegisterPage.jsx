@@ -15,6 +15,17 @@ export const Register = () => {
     const navigate = useNavigate();
     const numeroContaR = (Math.floor(Math.random() * 100000)+"-"+Math.floor(Math.random() * 10)).toString();
     const numeroAgenciaR = (Math.floor(Math.random() * 10000)).toString();
+    const numeroCartaoR1 = (Math.floor(Math.random() * 10000)).toString();
+    const numeroCartaoR2 = (Math.floor(Math.random() * 10000)).toString();
+    const numeroCartaoR3 = (Math.floor(Math.random() * 10000)).toString();
+    const numeroCartaoR4 = (Math.floor(Math.random() * 10000)).toString();
+    const numeroCartaoR = (numeroCartaoR1 + " " + numeroCartaoR2 + " " + numeroCartaoR3 + " " + numeroCartaoR4).toString()
+    const dataAtual = new Date()
+    const anoAtual = dataAtual.getFullYear()
+    const Anovalidade = anoAtual + 4
+    const mesAtual = dataAtual.getMonth() 
+    const validadeCard = mesAtual + "/" + Anovalidade.toString().slice(2,5)
+    const cvvCard = (Math.floor(Math.random() * 1000)).toString();
     // const [foto, setFoto] = useState('')
     // const [data, setData] = useState({
     //     title: "",
@@ -61,7 +72,7 @@ export const Register = () => {
             'Content-Type': 'application/json',
         };
 
-        const objConta = { cliente: objCliente, numeroConta: numeroContaR, agencia: numeroAgenciaR, tipo: 'C', saldo: 2500.00 }
+        const objConta = { cliente: objCliente, numeroConta: numeroContaR, agencia: numeroAgenciaR, tipo: 'C', saldo: 2500.00, numeroCartao: numeroCartaoR, validade: validadeCard, cvv: cvvCard}
         fetch(urlApi + '/conta/', { method: 'POST', headers, body: JSON.stringify(objConta) }).then(res => res.json()).then(dd => {
             console.log(dd)
         })

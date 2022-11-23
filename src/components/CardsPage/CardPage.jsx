@@ -2,15 +2,18 @@ import { Navbar } from "../navbar/Navbar"
 import { Footer } from "../footer/Footer"
 import Marco from "../../assets/marco.png"
 import CardIcon from "../../assets/cartao.png"
-
+import { useAccount } from "../navbar/Navbar"
 
 export const CardPage = () =>{
+    const session = useAccount();
     return(
         <div>
             <Navbar/>
+            {!session && 
+            <>
             <div className="pt-8 flex center">
             <div>
-                <img src={CardIcon} alt="Pix icon"  className="h-44 w-44 absolute ml-72"/>
+                <img src={CardIcon} alt="card icon"  className="h-44 w-44 absolute ml-72"/>
                 </div>
             <div className="mt-64 ml-60 text-2xl">
                     <h2>Lorem ipsum dolor sit</h2>
@@ -25,8 +28,11 @@ export const CardPage = () =>{
                     <h2>laboris nisi ut aliquip</h2>
                 </div>
                 
-                <img src={Marco} alt="cardGirl" className="CardGirl"/>
+                <img src={Marco} alt="marco" className="CardGirl"/>
             </div>
+            </>
+            }
+            
             <div>
                 <Footer/>
             </div>

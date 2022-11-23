@@ -2,11 +2,14 @@ import { Navbar } from "../navbar/Navbar"
 import { Footer } from "../footer/Footer"
 import PixIcon from "../../assets/pix.png"
 import Kizaru from "../../assets/kizaru.png"
-
+import { useAccount } from "../navbar/Navbar"
 export const PixPage = () =>{
+    const session = useAccount()
     return(
         <div>
             <Navbar/>
+            {!session &&
+            <>
             <div className="pt-8 flex">
             <div>
                 <img src={PixIcon} alt="Pix icon"  className="h-44 w-44 absolute ml-72"/>
@@ -26,6 +29,8 @@ export const PixPage = () =>{
                 
                 <img src={Kizaru} alt="PixGirl" className="PixGirl"/>
             </div>
+            </>
+            }            
             <div>
                 <Footer/>
             </div>

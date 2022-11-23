@@ -2,13 +2,16 @@ import { Navbar } from "../navbar/Navbar";
 import { Footer } from "../footer/Footer";
 import Zoro from "../../assets/zoro.png"
 import TransIcon from "../../assets/transferencia.png"
-
+import { useAccount } from "../navbar/Navbar";
 
 
 export const TransferencePage = () =>{
+    const session = useAccount()
     return(
         <div>
             <Navbar/>
+            {!session &&
+            <>
             <div className="pt-8 flex">
                 <img src={Zoro} alt="Man" className="manTransference"/>
                 <div>
@@ -27,6 +30,9 @@ export const TransferencePage = () =>{
                     <h2>laboris nisi ut aliquip</h2>
                 </div>
             </div>
+            </>
+            }
+            
             <div>
             <Footer/>
             </div>

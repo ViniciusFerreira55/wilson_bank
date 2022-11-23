@@ -16,6 +16,9 @@ import { useEffect } from "react";
  * @property {string} conta.cliente.email
  * @property {string} conta.cliente.data_cadastro
  * @property {string} conta.cliente.password
+ * @property {string} conta.numeroCartao
+ * @property {string} conta.validade
+ * @property {string} conta.cvv
  */
 
 /**
@@ -57,11 +60,6 @@ export const Navbar = () => {
         <div className="place-content-evenly bg-purple-500 content-center rounded-b-lg flex justify-center">
             <div className="object-scale-down h-20 w-96"><img className="h-auto w-screen" src={Logo} alt="logo"/></div>
             <ul>
-                {session &&
-                <>
-                <li className="inline-block p-8">Bem-Vindo {session.conta.cliente.nome}</li>
-                </>
-                } 
                 <li className="inline-block p-8"><Link to="/">Home</Link></li>
                 <li className="inline-block p-8"><Link to="/about">Sobre</Link></li>
                 <li className="inline-block p-8"><Link to="/card">Cartões</Link></li>

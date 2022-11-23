@@ -9,7 +9,7 @@ export const Body = () => {
     return (
         <div>
             <div>
-            <div className="flex flex-col japonesa bg-[url('../src/assets/luffy.png')] bg-no-repeat h-[40rem] bg-cover  p-40  text-right text-2xl">
+            <div className="flex flex-col bg-[url('../src/assets/luffy.png')] bg-no-repeat h-[40rem] bg-cover  p-40  text-right text-2xl">
                 <h1>Wilsonstreet</h1>
                 <h2>Venha fazer parte dessa caminhada</h2>
                 <h3>Com WilsonStreet você </h3>

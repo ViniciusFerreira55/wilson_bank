@@ -2,11 +2,15 @@ import { Navbar } from "../navbar/Navbar";
 import { Footer } from "../footer/Footer";
 import Sanji from "../../assets/sanji.png"
 import InvestimentIcon from "../../assets/investimento.png"
+import { useAccount } from "../navbar/Navbar";
 export const InvestimentPage = () =>{
+    const session = useAccount()
     return(
         <div>
             <Navbar/>
-            <div className="pt-8 flex">
+            {!session && 
+            <>
+             <div className="pt-8 flex">
                 <img src={Sanji} alt="Man" className="manInvestiment pl-16"/>
                 <div>
                     <img src={InvestimentIcon} alt="transference icon"  className="h-44 w-44  iconCoin"/>
@@ -24,6 +28,8 @@ export const InvestimentPage = () =>{
                     <h2>laboris nisi ut aliquip</h2>
                 </div>
             </div>
+            </>
+            }           
             <div>
             <Footer/>
             </div>
