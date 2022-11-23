@@ -3,6 +3,7 @@ import { Footer } from "../footer/Footer"
 import PixIcon from "../../assets/pix.png"
 import Kizaru from "../../assets/kizaru.png"
 import { useAccount } from "../navbar/Navbar"
+import Smoker from "../../assets/smoker.png"
 export const PixPage = () =>{
     const session = useAccount()
     return(
@@ -28,6 +29,15 @@ export const PixPage = () =>{
                 </div>
                 
                 <img src={Kizaru} alt="PixGirl" className="PixGirl"/>
+            </div>
+            </>
+            }
+            {session &&
+            <>
+            <div>
+                <div>
+                    <img src={Smoker} alt="Smoker" />
+                </div>
             </div>
             </>
             }            

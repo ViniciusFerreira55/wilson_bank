@@ -3,6 +3,7 @@ import { Footer } from "../footer/Footer"
 import Marco from "../../assets/marco.png"
 import CardIcon from "../../assets/cartao.png"
 import { useAccount } from "../navbar/Navbar"
+import Mingo from "../../assets/doflamingo.png"
 
 export const CardPage = () =>{
     const session = useAccount();
@@ -32,7 +33,15 @@ export const CardPage = () =>{
             </div>
             </>
             }
-            
+            {session &&
+            <>
+             <div>
+                <div>
+                    <img src={Mingo} alt="Doflamingo" />
+                </div>
+            </div>
+            </>
+            }
             <div>
                 <Footer/>
             </div>
