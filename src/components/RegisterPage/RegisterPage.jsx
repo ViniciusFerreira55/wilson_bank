@@ -26,6 +26,7 @@ export const Register = () => {
     const mesAtual = dataAtual.getMonth() 
     const validadeCard = mesAtual + "/" + Anovalidade.toString().slice(2,5)
     const cvvCard = (Math.floor(Math.random() * 1000)).toString();
+    const cardImageNumber = (Math.floor(Math.random() * 4 + 1)).toString();
     // const [foto, setFoto] = useState('')
     // const [data, setData] = useState({
     //     title: "",
@@ -72,7 +73,7 @@ export const Register = () => {
             'Content-Type': 'application/json',
         };
 
-        const objConta = { cliente: objCliente, numeroConta: numeroContaR, agencia: numeroAgenciaR, tipo: 'C', saldo: 2500.00, numeroCartao: numeroCartaoR, validade: validadeCard, cvv: cvvCard}
+        const objConta = { cliente: objCliente, numeroConta: numeroContaR, agencia: numeroAgenciaR, tipo: 'C', saldo: 2500.00, numeroCartao: numeroCartaoR, validade: validadeCard, cvv: cvvCard, cardImage: cardImageNumber}
         fetch(urlApi + '/conta/', { method: 'POST', headers, body: JSON.stringify(objConta) }).then(res => res.json()).then(dd => {
             console.log(dd)
         })

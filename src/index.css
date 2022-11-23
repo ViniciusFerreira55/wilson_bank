@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.img{
+.img {
     height: 150px;
     width: 100%;
     display: flex;
@@ -17,49 +17,50 @@
     align-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 35px;;
-    
+    padding: 35px;
+    ;
+
 }
 
 .img a img {
     width: 150px;
 }
 
-.conheca{
+.conheca {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 50px 20px;
 }
 
-.manTransference{
+.manTransference {
     height: 60rem;
     width: 36rem;
 }
 
-.manInvestiment{
+.manInvestiment {
     height: 50rem;
     width: 37rem
 }
 
-.PixGirl{
+.PixGirl {
     height: 45rem;
     width: 34rem;
     margin-left: 20rem;
 }
 
-.CardGirl{
+.CardGirl {
     height: 48rem;
     width: 34rem;
     margin-left: 21rem;
 }
 
-.Shirohige{
+.Shirohige {
     height: 100vh;
     /* width: 36rem; */
 }
 
-.formulario{
+.formulario {
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -68,11 +69,11 @@
 }
 
 
-.iconCoin{
+.iconCoin {
     margin-left: 4rem;
 }
 
-.fundo{
+.fundo {
     background: url('./assets/mihawk.png') no-repeat;
     width: 100%;
     height: 80vh;
@@ -80,14 +81,15 @@
     background-size: 50rem 40rem;
 }
 
-.fundo2{
+.fundo2 {
     background: url('./assets/jozu.png') no-repeat;
     width: 100%;
     height: 80vh;
     background-position: right bottom;
     background-size: 50rem 40rem;
 }
-.container{
+
+.container {
     width: 1280px;
     height: 50vh;
     margin: 0 auto;

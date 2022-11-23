@@ -19,6 +19,7 @@ import { useEffect } from "react";
  * @property {string} conta.numeroCartao
  * @property {string} conta.validade
  * @property {string} conta.cvv
+ * @property {string} conta.cardImage
  */
 
 /**
