@@ -4,28 +4,14 @@ import Marco from "../../assets/marco.png"
 import CardIcon from "../../assets/cartao.png"
 import { useAccount } from "../navbar/Navbar"
 import Mingo from "../../assets/doflamingo.png"
-import { useState } from "react"
-import { useEffect } from "react"
+import { Card } from "../Card/Card"
 
 export const CardPage = () => {
     const session = useAccount();
-    const [card, setCard] = useState('');
 
-    useEffect(() => {
-        // if (session.conta.cardImage === "1") {
-        //     setCard("luffyCard.png")
-        // }
-        // else if (session.conta.cardImage === "2") {
-        //     setCard("zoroCard.png")
-        // }
-        // else if (session.conta.cardImage === "3") {
-        //     setCard("sanjiCard.png")
-        // }
-        // else if (session.conta.cardImage === "4") {
-        //     setCard("sunnyCard.png")
-        // }
-        console.log(session)
-    })
+    if (!session) {
+        return <div>Loading..</div>
+    }
 
     return (
         <div>
@@ -54,16 +40,12 @@ export const CardPage = () => {
                 </>
             }
             {session &&
-                <>
+                <div>
                     <div>
-                        <div>
-                            <img src={Mingo} alt="Doflamingo" />
-                        </div>
-                        <div className={`bg-[url(../src/assets/${card}')] bg-no-repeat h-[40rem]`}>
-                            <h1 className="text-9xl">Seja bem-vindo {session.conta.cliente.nome}</h1>
-                        </div>
+                        <img src={Mingo} alt="Doflamingo" />
                     </div>
-                </>
+                    <Card />
+                </div>
             }
             <div>
                 <Footer />

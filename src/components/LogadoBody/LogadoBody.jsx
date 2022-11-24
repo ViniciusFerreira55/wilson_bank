@@ -7,7 +7,6 @@ import Cartao from '../../assets/cartao.png'
 import Investimento from '../../assets/investimento.png'
 import { Link } from 'react-router-dom'
 import { useAccount } from "../navbar/Navbar";
-import Zunisha from "../../assets/zunisha.jpg"
 
 export const LogadoBody = () => {
     const session = useAccount();
@@ -29,6 +28,8 @@ export const LogadoBody = () => {
                 <button href="" onClick={() => { setImage(!image) }} className="flex flex-row">
                     {image === false ? (<>{aux.repeat(session.conta.saldo.toString().length)} <img src={Hide} className="w-8 h-8 ml-8" alt="olho"/></>) : (<>{session.conta.saldo}<img src={View} className="w-8 h-8 ml-8" alt="olho2"></img></>)}
                 </button>
+                <div>Agencia: {session.conta.agencia}</div>
+                <div>Numero da Conta: {session.conta.numeroConta}</div>
             </div>
             </div>
         </div>
