@@ -78,7 +78,7 @@ export const Register = () => {
             console.log(dd)
         })
 
-        navigate('/')
+        navigate('/login')
     }
 
     return (

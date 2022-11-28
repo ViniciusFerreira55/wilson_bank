@@ -8,12 +8,13 @@ export const CardLogado = () => {
     if (!session) {
         return <div>Loading..</div>
     }
+
     return (
         <div>
             <div>
                 <img src={Mingo} alt="Doflamingo" />
             </div>
-            <Card />
+            <Card conta={session.conta}/>
         </div>
     )
 }
