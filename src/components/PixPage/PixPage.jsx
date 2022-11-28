@@ -28,7 +28,7 @@ export const PixPage = () =>{
                     <h2>laboris nisi ut aliquip</h2>
                 </div>
                 
-                <img src={Kizaru} alt="PixGirl" className="PixGirl"/>
+                <img src={Kizaru} alt="PixGirl" className="kizaru"/>
             </div>
             </>
             }

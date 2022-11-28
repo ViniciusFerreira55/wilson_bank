@@ -3,7 +3,7 @@ import { Footer } from "../footer/Footer";
 import Zoro from "../../assets/zoro.png"
 import TransIcon from "../../assets/transferencia.png"
 import { useAccount } from "../navbar/Navbar";
-
+import NekoMamushi from "../../assets/nekomamushi.png"
 
 export const TransferencePage = () =>{
     const session = useAccount()
@@ -13,7 +13,7 @@ export const TransferencePage = () =>{
             {!session &&
             <>
             <div className="pt-8 flex">
-                <img src={Zoro} alt="Man" className="manTransference"/>
+                <img src={Zoro} alt="Man" className="zoro"/>
                 <div>
                     <div><img src={TransIcon} alt="transference icon"  className="h-44 w-44 absolute ml-96"/></div>
                 </div>
@@ -29,6 +29,15 @@ export const TransferencePage = () =>{
                     <h2>exercitation ullamco</h2>
                     <h2>laboris nisi ut aliquip</h2>
                 </div>
+            </div>
+            </>
+            }
+            {session && 
+            <>
+            <div>
+            <div>
+                <img src={NekoMamushi} alt="neko" />
+            </div>
             </div>
             </>
             }

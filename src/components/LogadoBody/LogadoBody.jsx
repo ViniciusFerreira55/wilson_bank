@@ -50,7 +50,7 @@ export const LogadoBody = () => {
             <div className="mr-16">
             <div className="flex justify-center mt-8 border-2 border-indigo-400">
                 <Link to="/investimento">
-                    <img src={Investimento} alt="investimento" className="h-16 w-16"/><h1 className="mt-2 text-5xl ml-2">Pix</h1>
+                    <img src={Investimento} alt="investimento" className="h-16 w-16"/><h1 className="mt-2 text-5xl ml-2">Investimento</h1>
                 </Link>
                 </div>
             <div className="flex justify-center mt-8 border-2 border-indigo-400">

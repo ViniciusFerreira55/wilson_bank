@@ -3,15 +3,10 @@ import { Footer } from "../footer/Footer"
 import Marco from "../../assets/marco.png"
 import CardIcon from "../../assets/cartao.png"
 import { useAccount } from "../navbar/Navbar"
-import Mingo from "../../assets/doflamingo.png"
-import { Card } from "../Card/Card"
+import { CardLogado} from "../CardLogado/CardLogado"
 
 export const CardPage = () => {
     const session = useAccount();
-
-    if (!session) {
-        return <div>Loading..</div>
-    }
 
     return (
         <div>
@@ -35,17 +30,13 @@ export const CardPage = () => {
                             <h2>laboris nisi ut aliquip</h2>
                         </div>
 
-                        <img src={Marco} alt="marco" className="CardGirl" />
+                        <img src={Marco} alt="marco" className="Marco" />
                     </div>
                 </>
             }
-            {session &&
-                <div>
-                    <div>
-                        <img src={Mingo} alt="Doflamingo" />
-                    </div>
-                    <Card />
-                </div>
+             
+            {session &&                   
+               <CardLogado />
             }
             <div>
                 <Footer />

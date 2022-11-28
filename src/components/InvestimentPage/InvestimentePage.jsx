@@ -3,6 +3,8 @@ import { Footer } from "../footer/Footer";
 import Sanji from "../../assets/sanji.png"
 import InvestimentIcon from "../../assets/investimento.png"
 import { useAccount } from "../navbar/Navbar";
+import Law from "../../assets/law.png"
+
 export const InvestimentPage = () =>{
     const session = useAccount()
     return(
@@ -11,7 +13,7 @@ export const InvestimentPage = () =>{
             {!session && 
             <>
              <div className="pt-8 flex">
-                <img src={Sanji} alt="Man" className="manInvestiment pl-16"/>
+                <img src={Sanji} alt="Man" className="sanji pl-16"/>
                 <div>
                     <img src={InvestimentIcon} alt="transference icon"  className="h-44 w-44  iconCoin"/>
                 </div>
@@ -29,7 +31,16 @@ export const InvestimentPage = () =>{
                 </div>
             </div>
             </>
-            }           
+            }  
+            {session &&
+            <>
+            <div>
+            <div>
+                <img src={Law} alt="law" />
+            </div>
+            </div>
+            </>
+            }         
             <div>
             <Footer/>
             </div>
