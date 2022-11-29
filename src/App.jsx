@@ -8,6 +8,9 @@ import { LoginPage } from "./components/LoginPage/LoginPage"
 import Home from "./components/HomePage/Home"
 import { AboutPage } from "./components/AboutPage/AboutPage"
 import { Register } from './components/RegisterPage/RegisterPage'
+import { PagamentoPage } from './components/PagamentoPage/PagamentoPage'
+import { LimitePage } from './components/LimitePage/LimitePage'
+
 
 export const App = () => {
   return(
@@ -21,6 +24,8 @@ export const App = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/register" element={<Register />}/>
+      <Route path="/pagamento" element={<PagamentoPage />}/>
+      <Route path="/limit" element={<LimitePage />}/>
       </Routes>
     </Router>
   )

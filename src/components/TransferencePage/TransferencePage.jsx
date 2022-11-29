@@ -34,7 +34,7 @@ export const TransferencePage = () =>{
             }
             {session && 
             <>
-            <div>
+            <div className="flex">
             <div>
                 <img src={NekoMamushi} alt="neko" />
             </div>

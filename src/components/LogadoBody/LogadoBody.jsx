@@ -7,9 +7,8 @@ import Cartao from '../../assets/cartao.png'
 import Investimento from '../../assets/investimento.png'
 import { Link } from 'react-router-dom'
 import { useAccount } from "../navbar/Navbar";
-import Pagamento from "../../assets/pagamento.png"
 import Limite from "../../assets/limit.png"
-
+import Pagamento from "../../assets/pagamento.png"
 export const LogadoBody = () => {
     const session = useAccount();
     const [image, setImage] = useState(false)
@@ -18,6 +17,7 @@ export const LogadoBody = () => {
     if (!session) {
         return <div>Loading..</div>
     }
+
 
     return (  
         <div>
@@ -47,6 +47,11 @@ export const LogadoBody = () => {
                     <img src={Tranferencia} alt="transferencia" className="h-16 w-16"/><h1 className="mt-2 text-5xl ml-2">Transferência</h1>
                     </Link>
                 </div>
+                <div className="flex justify-center mt-8 border-2 border-indigo-400">
+                    <Link to="/pagamento">
+                    <img src={Pagamento} alt="transferencia" className="h-16 w-16"/><h1 className="mt-2 text-5xl ml-2">Pagamento</h1>
+                    </Link>
+                </div>
 
             </div>
             <div className="mr-16">
@@ -59,7 +64,7 @@ export const LogadoBody = () => {
                 <Link to="/card"><img src={Cartao} alt="Cartao" className="h-16 w-16"/><h1 className="mt-2 text-5xl ml-2">Cartão</h1></Link>
                 </div>
             <div className="flex justify-center mt-8 border-2 border-indigo-400">
-                <Link to="/card"><img src={Limite} alt="limite" className="h-16 w-16"/><h1 className="mt-2 text-5xl ml-2">Cartão</h1></Link>
+                <Link to="/limit"><img src={Limite} alt="limite" className="h-16 w-16"/><h1 className="mt-2 text-5xl ml-2">Limite</h1></Link>
                 </div>
             </div>
             </div>

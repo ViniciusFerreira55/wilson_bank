@@ -2,7 +2,7 @@ import Logo from "../../assets/logo.png"
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from "react"
 import { useEffect } from "react";
-
+import Swal from 'sweetalert2'
 /** @typedef {object} session
  * @property {object} conta
  * @property {string} conta.numeroConta
@@ -48,6 +48,12 @@ export const useLogoff = () => {
     return {
         logoff: () => {
             sessionStorage.removeItem('conta')
+            Swal.fire({
+                title: 'Saindo',
+                text: 'Até mais',
+                icon: 'success',
+                confirmButtonText: 'Continuar'
+              })
             navigate('/login')
         }
     }

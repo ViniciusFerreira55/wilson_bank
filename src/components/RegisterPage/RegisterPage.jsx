@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../navbar/Navbar";
+import Swal from 'sweetalert2'
 
 export const Register = () => {
     const urlApi = 'http://127.0.0.1:8000'
@@ -38,7 +39,28 @@ export const Register = () => {
         console.log(senha)
         console.log(confirmarSenha)
         if (senha !== confirmarSenha) {
-            return console.log('zimbas')
+            return Swal.fire({
+                title: 'Error!',
+                text: 'As senha não coincidem',
+                icon: 'error',
+                confirmButtonText: 'Continuar'
+              })
+        }
+        if (cfp.length < 11 || cfp.length > 11){
+            return Swal.fire({
+                title: 'Error!',
+                text: 'CPF Invalido',
+                icon: 'error',
+                confirmButtonText: 'Continuar'
+              })
+        }
+        if (nome.length < 1){
+            return Swal.fire({
+                title: 'Error!',
+                text: 'Digite seu nome',
+                icon: 'error',
+                confirmButtonText: 'Continuar'
+              })
         }
 
         cadastrar()
@@ -77,6 +99,13 @@ export const Register = () => {
         fetch(urlApi + '/conta/', { method: 'POST', headers, body: JSON.stringify(objConta) }).then(res => res.json()).then(dd => {
             console.log(dd)
         })
+        Swal.fire({
+            title: 'Conta Criada',
+            text: 'Cadastro Feito com Sucesso',
+            icon: 'success',
+            confirmButtonText: 'Continuar'
+          })
+
 
         navigate('/login')
     }

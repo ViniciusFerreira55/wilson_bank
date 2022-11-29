@@ -4,6 +4,7 @@ import Shirohige from "../../assets/Shirohige.png"
 import { useNavigate } from 'react-router-dom'
 import { useState } from "react";
 import { useEffect } from "react";
+import Swal from 'sweetalert2'
 const loginApiUrl = 'http://localhost:8000/login/';
 
 
@@ -33,9 +34,21 @@ export const LoginPage = () =>{
                 res.json().then(({ conta }) =>{
                     if (conta) {
                         sessionStorage.setItem('conta', JSON.stringify({ conta }));
+                        Swal.fire({
+                            title: 'Bem-vindo',
+                            text: 'Login Feito com Sucesso',
+                            icon: 'success',
+                            confirmButtonText: 'Continuar'
+                          })
                         navigate('/')
                         return
                     }
+                    return Swal.fire({
+                        title: 'Erro ao logar',
+                        text: 'Verifique se o CPF e a Senha estão corretas',
+                        icon: 'error',
+                        confirmButtonText: 'Continuar'
+                      })
                 })
             })
     }
