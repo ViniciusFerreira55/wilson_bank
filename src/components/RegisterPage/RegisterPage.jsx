@@ -118,20 +118,20 @@ export const Register = () => {
                 <div className="inline-grid mt-32 ml-96">
                     <form className="formulario list-none">
                         <h1>Nome</h1>
-                        <li><input type="text" onChange={e => setNome(e.target.value)} name="nome" placeholder="Wilson" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <li><input type="text" onChange={e => setNome(e.target.value)} name="nome" placeholder="Wilson" className="border-4 mb-4 p-5 border-cyan-600 h-14 w-96" /></li>
                         <h1>CPF</h1>
-                        <li><input type="text" onChange={e => setCpf(e.target.value)} name="cpf" placeholder="12345678912" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <li><input type="text" onChange={e => setCpf(e.target.value)} name="cpf" placeholder="12345678912" className="border-4 mb-4 p-5 border-cyan-600 h-14 w-96" /></li>
                         <h1>Data de Nascimento</h1>
-                        <li><input type="date" onChange={e => setDataNascimento(e.target.value)} name="dataNas" placeholder="Data de nascimento" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <li><input type="date" onChange={e => setDataNascimento(e.target.value)} name="dataNas" placeholder="Data de nascimento" className="border-4 mb-4 p-5 border-cyan-600 h-14 w-96" /></li>
                         <h1>Email</h1>
-                        <li><input type="email" onChange={e => setEmail(e.target.value)} name="email" placeholder="jonas@gmail.com" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <li><input type="email" onChange={e => setEmail(e.target.value)} name="email" placeholder="jonas@gmail.com" className="border-4 mb-4 p-5 border-cyan-600 h-14 w-96" /></li>
                         <h1>Senha</h1>
-                        <li><input type="password" onChange={e => setSenha(e.target.value)} name="senha" placeholder="123456" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <li><input type="password" onChange={e => setSenha(e.target.value)} name="senha" placeholder="123456" className="border-4 mb-4 p-5 border-cyan-600 h-14 w-96" /></li>
                         <h1>Confirmar Senha</h1>
-                        <li><input type="password" onChange={e => setConfirmarSenha(e.target.value)} name="confirmar" placeholder="123456" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96" /></li>
+                        <li><input type="password" onChange={e => setConfirmarSenha(e.target.value)} name="confirmar" placeholder="123456" className="border-4 mb-4 p-5 border-cyan-600 h-14 w-96" /></li>
                         {/* <h1>Foto</h1>
                     <li><input type="file" onChange={(e) => {handleImageChange(e)}}  name="photo" placeholder="Photo" className="border-4 mb-4 p-5 border-indigo-600 h-14 w-96"/></li> */}
-                        <li className="text-center"><a className="inline-block p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5"><button type="button" onClick={validarCadastro}>Cadastrar-se</button></a></li>
+                        <li className="text-center"><a className="inline-block p-12 rounded-full py-3 px-6 bg-cyan-400 last:ml-5"><button type="button" onClick={validarCadastro}>Cadastrar-se</button></a></li>
                     </form>
                 </div>
             </div>

@@ -10,11 +10,13 @@ export const CardLogado = () => {
     }
 
     return (
-        <div>
-            <div>
+        <div className="flex py-20">
+            <div className="mt-36">
                 <img src={Mingo} alt="Doflamingo" />
             </div>
+            <div className="ml-96">
             <Card conta={session.conta}/>
+            </div>
         </div>
     )
 }

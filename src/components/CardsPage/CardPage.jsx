@@ -14,10 +14,11 @@ export const CardPage = () => {
             {!session &&
                 <>
                     <div className="pt-8 flex center">
+                        <div className="flex">
                         <div>
                             <img src={CardIcon} alt="card icon" className="h-44 w-44 absolute ml-72" />
                         </div>
-                        <div className="mt-64 ml-60 text-2xl">
+                        <div className="mt-64 ml-60 text-2xl font-mono font-bold">
                             <h2>Lorem ipsum dolor sit</h2>
                             <h2>amet, consectetur</h2>
                             <h2>adipiscing elit, sed do</h2>
@@ -28,6 +29,7 @@ export const CardPage = () => {
                             <h2>veniam, quis nostrud</h2>
                             <h2>exercitation ullamco</h2>
                             <h2>laboris nisi ut aliquip</h2>
+                        </div>
                         </div>
 
                         <img src={Marco} alt="marco" className="Marco" />

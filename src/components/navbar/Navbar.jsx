@@ -64,8 +64,9 @@ export const Navbar = () => {
     const { logoff } = useLogoff();
 
     return (
-        <div className="place-content-evenly bg-purple-500 content-center rounded-b-lg flex justify-center">
-            <div className="object-scale-down h-20 w-96"><img className="h-auto w-screen" src={Logo} alt="logo"/></div>
+        <div className="place-content-evenly bg-cyan-300	 content-center rounded-b-lg flex justify-center">
+            <h3 className="text-cyan-700	font-mono text-4xl mt-6 font-bold">WilsonStreet</h3>
+            {/* <div className="object-scale-down h-20 w-96"><img className="h-auto w-screen" src={Logo} alt="logo"/></div> */}
             <ul>
                 <li className="inline-block p-8"><Link to="/">Home</Link></li>
                 <li className="inline-block p-8"><Link to="/about">Sobre</Link></li>
@@ -73,12 +74,12 @@ export const Navbar = () => {
                 {!session && 
                 <>
                     <li className="inline-block ">
-                        <a className="p-12 rounded-full py-3 px-6 bg-purple-400" href="Login">
+                        <a className="p-12 rounded-full py-3 px-6 bg-cyan-500	" href="Login">
                             <Link to="/login">Login</Link>
                         </a>
                     </li>
                     <li className="inline-block">
-                        <a className=" p-12 rounded-full py-3 px-6 bg-purple-400 last:ml-5" href="Register">
+                        <a className=" p-12 rounded-full py-3 px-6 bg-cyan-500	 last:ml-5" href="Register">
                             <Link to='/register'>Cadastrar-se</Link>
                         </a>
                     </li>
@@ -88,7 +89,7 @@ export const Navbar = () => {
                 <>
 
                     <li className="inline-block ">
-                        <button onClick={logoff} className="p-12 rounded-full py-3 px-6 bg-purple-400">Sair</button>
+                        <button onClick={logoff} className="p-12 rounded-full py-3 px-6 bg-cyan-500">Sair</button>
                     </li>
                 </>
                 }

@@ -17,7 +17,7 @@ export const TransferencePage = () =>{
                 <div>
                     <div><img src={TransIcon} alt="transference icon"  className="h-44 w-44 absolute ml-96"/></div>
                 </div>
-                <div className="mt-64 ml-96 text-2xl">
+                <div className="mt-72 ml-96 text-2xl font-mono font-bold">
                     <h2>Lorem ipsum dolor sit</h2>
                     <h2>amet, consectetur</h2>
                     <h2>adipiscing elit, sed do</h2>

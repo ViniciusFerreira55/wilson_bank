@@ -19,7 +19,7 @@ export const Card = ({ conta }) => {
                 <div className="text-2xl validadeCartao">Valid Thru: {conta.validade}</div>
                 <div className="text-2xl nomeCard">{conta.cliente.nome}</div>
             </div>
-            <div style={{ backgroundImage: `url(${cardImages[Number(conta.cardImage) - 1].back})`}} className="bg-no-repeat h-[23rem] w-[40rem] bg-center relative">
+            <div style={{ backgroundImage: `url(${cardImages[Number(conta.cardImage) - 1].back})`}} className="bg-no-repeat h-[23rem] w-[40rem] bg-center relative mt-24">
                 <div className="text-2xl absolute cvv">{conta.cvv}</div>
                 <div className="absolute bottom-0 text-green-600 text-sm">sac: 0800 727 9988 Deficiência Auditiva ou de Fala: 0800 727 0099 Ouvidoria: 0800 727 99333</div>
             </div>

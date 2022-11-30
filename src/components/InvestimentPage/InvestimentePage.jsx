@@ -12,12 +12,12 @@ export const InvestimentPage = () =>{
             <Navbar/>
             {!session && 
             <>
-             <div className="pt-8 flex">
+             <div className="flex">
                 <img src={Sanji} alt="Man" className="sanji pl-16"/>
                 <div>
-                    <img src={InvestimentIcon} alt="transference icon"  className="h-44 w-44  iconCoin"/>
+                    <img src={InvestimentIcon} alt="transference icon"  className="h-44 w-44 absolute ml-72 "/>
                 </div>
-                <div className="mt-64 mr-24 text-2xl">
+                <div className="mt-64 mr-24 text-2xl ml-64 font-mono font-bold">
                     <h2>Lorem ipsum dolor sit</h2>
                     <h2>amet, consectetur</h2>
                     <h2>adipiscing elit, sed do</h2>
